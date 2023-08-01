@@ -1,38 +1,104 @@
-.App {
+html,
+body {
+  color: var(--color);
   text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url("./assets/BG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-weight: 600;
+  max-width: 700px;
+  margin: auto;
+  padding: 10px;
+  font-family: var(--font);
+  letter-spacing: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  padding: 5px;
+  text-shadow: 1px 2px black;
+}
+
+.quoteCard {
+  background-color: rgba(0, 0, 0, 0.11);
+  padding: 20px;
+  margin: 15px auto;
+  width: 86%;
+  border-radius: 5px;
+  line-height: 1.5em;
+}
+
+button {
+  display: block;
+  margin: 20px auto 30px;
+  border: none;
+  background: #a80020;
+  cursor: pointer;
+  padding: 5px 22px;
+  font-family: var(--font);
+  color: rgb(34, 34, 34);
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.212);
+}
+
+button:hover {
+  border: 1px inset gray;
+}
+
+hr {
+  border: 1px ridge rgba(199, 199, 204, 0.438);
+  margin-top: 80px;
+}
+
+h3 {
+  padding-bottom: 10px;
+}
+
+textarea {
+  border: none;
+  width: 86%;
+  margin: 0 auto;
+  outline: none;
+  height: 200px;
+  background: var(--color);
+  font-family: var(--font);
+  padding: 20px;
+  line-height: 1.2;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+textarea::placeholder {
+  font-weight: bold;
+  color: rgb(63, 87, 133);
+  font-size: 1em;
+}
+
+textarea:active {
+  border: 3px inset gray;
+  background: var(--color);
+}
+
+footer {
+  color: lightgray;
+  text-align: center;
+  font-size: 10px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1000px){
+  body {
+    background-position: center; 
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
